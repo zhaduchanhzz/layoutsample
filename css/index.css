@@ -1,0 +1,93 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #39464e;
+}
+
+.nav-link {
+  color: #E5F7FE;
+}
+
+.nav-pills {
+  width: 100%;
+}
+
+.nav-pills > li {
+  width: 100%;
+}
+
+#side-bar-container {
+  width: 250px;
+  transition: all 0.5s;
+}
+#side-bar-container #side-bar-icon {
+  top: 65%;
+  right: -22px;
+  font-size: 22px;
+  border: 10px solid white;
+  border-radius: 50%;
+  color: #012C84;
+  background-color: white;
+  cursor: pointer;
+}
+#side-bar-container.close {
+  transform: translateX(-250px);
+  transition: all 0.5s;
+}
+#side-bar-container.close #side-bar-icon {
+  transform: rotate(180deg);
+  transition: all 1s;
+  right: -35px;
+}
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fccb90;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+}
+
+.gradient-custom-3 {
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+
+@media (min-width: 768px) {
+  .gradient-form {
+    height: 100vh !important;
+  }
+}
+@media (min-width: 769px) {
+  .gradient-custom-2 {
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+  }
+}
+.logo-img {
+  width: 200px;
+  height: auto;
+}
+
+section {
+  background-image: url(/images/login-background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  section {
+    background-size: contain;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
