@@ -11,40 +11,44 @@ body {
   color: #39464e;
 }
 
-.nav-link {
-  color: #E5F7FE;
-}
-
-.nav-pills {
-  width: 100%;
-}
-
-.nav-pills > li {
-  width: 100%;
-}
-
 #side-bar-container {
   width: 250px;
   transition: all 0.5s;
 }
-#side-bar-container #side-bar-icon {
+
+
+#side-bar-container.close {
+  transform: translateX(-250px);
+  transition: all 0.5s;
+}
+
+#content-container {
+  width: calc(100% - 250px);
+  position: relative;
+}
+
+#content-container #side-bar-icon {
   top: 65%;
-  right: -22px;
-  font-size: 22px;
+  left: -22px;
+  font-size: 26px;
   border: 10px solid white;
   border-radius: 50%;
   color: #012C84;
   background-color: white;
   cursor: pointer;
 }
-#side-bar-container.close {
+
+
+#content-container.close {
+  width: calc(100%);
   transform: translateX(-250px);
   transition: all 0.5s;
 }
-#side-bar-container.close #side-bar-icon {
+
+#content-container.close #side-bar-icon {
+  left: 0px;
   transform: rotate(180deg);
-  transition: all 1s;
-  right: -35px;
+  transition: all 0.5s;
 }
 
 .gradient-custom-2 {
@@ -66,15 +70,50 @@ body {
     height: 100vh !important;
   }
 }
+
 @media (min-width: 769px) {
   .gradient-custom-2 {
     border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
   }
 }
+
 .logo-img {
   width: 200px;
   height: auto;
+}
+
+.bg-gradient-primary {
+  background-color: #012C84;
+  background-image: none;
+}
+
+.dropup {
+  height: 50px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 5.5em;
+}
+
+a.collapse-item {
+  color: white !important;
+}
+
+a.nav-link:hover {
+  background-color: rgba(30, 211, 211, 0.801) !important;
+}
+
+ul.nav {
+  width: 100%;
+}
+
+ul.nav li {
+  width: 100%;
+}
+
+a.nav-link {
+  color: rgba(255, 255, 255, 0.822) !important;
 }
 
 section {
@@ -84,10 +123,13 @@ section {
   background-position: center;
 }
 
-@media (max-width: 768px) {
-  section {
-    background-size: contain;
-  }
-}
-
-/*# sourceMappingURL=index.css.map */
+/* .sidebar #sidebarToggle {
+  background-color: #012C84;
+  color: white;
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  border: 5px solid white;
+  width: 3rem;
+  height: 3rem;
+} */
